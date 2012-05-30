@@ -1,0 +1,42 @@
+input {
+	margin: 10px 10px;  
+	float: left; 
+}
+
+select {
+	display: block; 
+	margin: 10px 10px; 
+	float: left; 
+}
+
+#gender {
+	clear: left; 
+}
+
+#submit_button {
+	float: none; 
+	margin: 5px auto 20px auto; 
+	clear: both; 
+	width: 775px; 
+}
+
+td {
+	text-align: center; 
+}
+
+table {
+	margin: 20px auto 10px auto; 
+	width: 775px; 
+}
+
+.query_fields {
+	overflow: auto; 
+}
+
+.msg {
+	text-align: center; 
+}
+
+#table_head {
+	background-color: #42AAFF; 
+}

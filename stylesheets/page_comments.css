@@ -1,0 +1,14 @@
+.comment_title {
+	font-weight: bold; 
+	font-size: 20px; 
+	margin-top: 20px; 
+	margin-bottom: 0; 
+}
+
+.comment_content {
+	margin-top: 0; 
+}
+
+#content_middle {
+	padding: 15px 55px; 
+}
