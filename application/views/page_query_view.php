@@ -67,15 +67,27 @@ function goto_page(i)
 <? foreach ($data as $row): ?>
 
 <div class="article_entity">
+<div class="article_desc">
 <h2><?= anchor("page/show/" . $row->id, to_html($row->title)) . " "; ?></h2>
 <p class="author"><?= to_html($row->author); ?></p>
 <p class="preview">
 <?
 	$preview = to_html_rich_plain($row->content); 
 	if (strlen($preview) > $this->config->item('page_preview_length')) $preview = substr($preview, 0, $this->config->item('page_preview_length')) . "……"; 
+	$thumbnail = fetch_tag_value($row->content, 'thumbnail'); 
+	echo('script type="text/javascript" alert(' . $thumbnail . '); script'); 
 ?>
 <?= $preview; ?>
 </p>
+</div>
+<div class="article_image">
+<? if ($thumbnail != ""): ?>
+
+<img src="<?= $thumbnail; ?>" width="<?= $this->config->item('article_image_width'); ?>" />
+
+<? endif; ?>
+
+</div>
 </div>
 
 <div class='division'></div>

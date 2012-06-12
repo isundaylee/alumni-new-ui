@@ -51,8 +51,21 @@ h2 a {
 }
 
 .preview {
+	text-align: justify; 
 }
 
 .article_entity {
 	margin: 20px; 
+	overflow: auto; 
+}
+
+.article_desc {
+	width: 570px; 
+	clear: none; 
+	float: left; 
+}
+
+.article_image {
+	float: left; 
+	margin-left: 30px; 
 }

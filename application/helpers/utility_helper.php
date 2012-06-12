@@ -62,6 +62,8 @@ function to_html_rich_plain($text, $data = array())
 	$text = preg_replace('/\\\\image{([^}]+),([0-9]+)}/', ' [Image] ', $text); 
 	$text = preg_replace('/\\\\image{([^}]+)}/', ' [Image] ', $text);  
 	$text = preg_replace('/\\\\flash{([^}]+)}/', ' [Flash] ', $text); 
+	$text = preg_replace('/\\\\thumbnail{([^}]+)}/', '', $text);  
+
 	$CI->load->language('signup'); 
 	$text = preg_replace('/\\\\signup/', $CI->lang->line('signup_signup'), $text); 
 	// $text = str_replace(" ", "&nbsp; ", $text); 
@@ -85,6 +87,12 @@ function safe_data($i)
 	{
 		return $i; 
 	}
+}
+
+function fetch_tag_value($text, $tagname) {
+	$matches = array(); 	
+	if (preg_match('/\\\\' . $tagname . '{([^}]+)}/', $text, $matches) == 0) return ""; 
+	else return $matches[1]; 
 }
 
 ?>

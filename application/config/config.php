@@ -14,7 +14,8 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/~Sunday/alumni/';
+
+require('site_specific.php'); 
 
 // $config['base_url']	= 'http://192.168.2.100/~Sunday/alumni/';
 //$config['base_url'] = "http://isundaylee.vicp.cc/~Sunday/alumni/";
@@ -629,6 +630,8 @@ $config['page_image_width'] = "600px";
 $config['page_flash_width'] = "600px"; 
 $config['page_flash_height'] = "500px";
 $config['page_preview_length'] = "256"; 
+
+$config['article_image_width'] = "150px"; 
 
 /* End of file config.php */
 /* Location: ./application/config/config.php */
