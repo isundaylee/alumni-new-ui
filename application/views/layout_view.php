@@ -17,7 +17,6 @@ if (!isset($extra_css)) $extra_css = array();
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script>
 		if (jQuery.browser.msie && jQuery.browser.version.slice(0, 1) <= "8") window.location.href = "<?= $this->config->item('base_url') . "unsupported.html"; ?>"; 
-		else alert("You are fine. "); 
 		</script>
 	</head>
 	
