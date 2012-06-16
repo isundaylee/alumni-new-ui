@@ -45,6 +45,7 @@ function to_html_rich($text, $data = array())
 	$text = preg_replace('/\\\\flash{([^}]+)}/', '<embed src="$1" quality="high" width="' . $CI->config->item('page_flash_width') . '" height="' . $CI->config->item('page_flash_height') . '"align="middle" allowScriptAccess="always" allowFullScreen="true" mode="transparent" type="application/x-shockwave-flash"></embed>', $text); 
 	$CI->load->language('signup'); 
 	$text = preg_replace('/\\\\signup/', '<a href="' . $CI->config->item('base_url') . $CI->config->item('index_page') . '/signup/add/' . $data["pid"] . '" ><div class="signup_button">' . $CI->lang->line('signup_signup') . '</div></a>', $text); 
+	$text = preg_replace('/\\\\thumbnail{([^}]+)}/', '', $text);  
 	// $text = str_replace(" ", "&nbsp; ", $text); 
 	$text = str_replace("\n", "<br />", $text); 
 	return $text; 
