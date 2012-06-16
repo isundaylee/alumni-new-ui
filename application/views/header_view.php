@@ -15,7 +15,8 @@ $this->load->language('index');
 	<div id="topbanner_text_right">
 	<?= $this->lang->line('misc_welcome'); ?>, <?= $username; ?>! 
 	<? if(!signed_in()): ?>
-	<?= anchor('membership/signin', $this->lang->line('membership_signin')); ?>
+	<?= anchor('membership/signin', $this->lang->line('membership_signin')); ?>  
+	<?= anchor('membership/signup', $this->lang->line('membership_signup')); ?>
 	<? else: ?>
 	<?= anchor('membership/do_signout', $this->lang->line('membership_signout')); ?>
 	<? endif; ?>
