@@ -19,6 +19,7 @@ class Page_model extends CI_Model {
    	{
    		$this->db->order_by("time", "desc"); 
    		foreach ($this->config->item('page_fields') as $field) if (isset($delim[$field]) && $delim[$field] != "") $this->db->like($field, $delim[$field]); 
+   		if (!isset($delim['type']) || $delim['type'] == '') $this->db->not_like('type', 'PP'); 
    		$this->db->limit($limit, $offset);
    		$query = $this->db->get('pages'); 
    		return $query->result();  

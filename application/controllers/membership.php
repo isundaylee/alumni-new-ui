@@ -163,7 +163,10 @@ class Membership extends CI_Controller {
 			$this->email->subject($this->lang->line('membership_es_password_generated')); 
 			$this->email->message(str_replace('|PASSWORD|', $password, $this->lang->line('membership_ec_password_generated')));
 			
-			if (!$this->email->send()) $this->layout->internal_error(array("errmsg" => "Cannot send email. ")); 
+			if (!$this->email->send()) {
+				$this->layout->internal_error(array("errmsg" => "Cannot send email. ")); 
+				// echo $this->email->print_debugger();
+			}
 			else
 			{
 				$this->layout->message(array('content' => $this->lang->line('membership_msg_password_generated'), 

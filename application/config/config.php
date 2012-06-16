@@ -16,11 +16,8 @@ require('site_specific.php');
 | path to your installation.
 |
 */
-<<<<<<< HEAD
 
 require('site_specific.php'); 
-=======
->>>>>>> d7e0e9b03133b2666a6829ee9b868a312db6e46d
 
 // $config['base_url']	= 'http://192.168.2.100/~Sunday/alumni/';
 //$config['base_url'] = "http://isundaylee.vicp.cc/~Sunday/alumni/";
@@ -625,7 +622,7 @@ $config['membership_fields'] = array("id", "password", "email", "name", "year", 
 
 $config['default_password_length'] = 6; 
 
-$config['webmaster_email'] = 'lzlqjh@126.com'; 
+$config['webmaster_email'] = 'wflser@163.com'; 
 
 $config['index_entries_per_page'] = 20; 
 $config['page_entries_per_page'] = 10; 

@@ -75,7 +75,6 @@ function goto_page(i)
 	$preview = to_html_rich_plain($row->content); 
 	if (strlen($preview) > $this->config->item('page_preview_length')) $preview = substr($preview, 0, $this->config->item('page_preview_length')) . "……"; 
 	$thumbnail = fetch_tag_value($row->content, 'thumbnail'); 
-	echo('script type="text/javascript" alert(' . $thumbnail . '); script'); 
 ?>
 <?= $preview; ?>
 </p>

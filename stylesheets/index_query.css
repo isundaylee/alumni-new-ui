@@ -40,3 +40,7 @@ table {
 #table_head {
 	background-color: #42AAFF; 
 }
+
+.table_row_alt {
+	background-color: #E0E0E0; 
+}
