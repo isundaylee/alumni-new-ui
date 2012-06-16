@@ -1,5 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+require('site_specific.php');
+
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
@@ -14,8 +16,11 @@
 | path to your installation.
 |
 */
+<<<<<<< HEAD
 
 require('site_specific.php'); 
+=======
+>>>>>>> d7e0e9b03133b2666a6829ee9b868a312db6e46d
 
 // $config['base_url']	= 'http://192.168.2.100/~Sunday/alumni/';
 //$config['base_url'] = "http://isundaylee.vicp.cc/~Sunday/alumni/";

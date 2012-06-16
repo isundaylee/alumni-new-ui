@@ -48,11 +48,8 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['port'] = '3306';
-$db['default']['hostname'] = '127.0.0.1';
-$db['default']['username'] = 'root';
-$db['default']['password'] = '';
-$db['default']['database'] = 'alumni';
+require('site_specific.php');
+
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
