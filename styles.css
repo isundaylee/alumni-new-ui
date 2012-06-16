@@ -1,5 +1,5 @@
 body {
-	margin: 0; 
+	margin: 0px; 
 	padding: 0; 
 }
 
@@ -112,8 +112,7 @@ body {
 }
 
 #infobar {
-	position: relative; 
-	top: -300px; 
+	margin-top: -300px; 
 	z-index: -100; 
 	background-color: #4169B2; 
 	height: 130px; 
