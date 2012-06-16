@@ -1,0 +1,55 @@
+body {
+	background-color: #66A3D2; 
+}
+
+#surrounding {
+	width: 700px; 
+	height: 480px; 
+	position: absolute;
+	top: 50%; 
+	left: 50%; 
+	overflow: show; 
+}
+
+#msg {
+	position: absolute; 
+	right: 50%; 
+	bottom: 50%; 
+	text-align: justify; 
+	width: 600px;
+	height: 440px;  
+	margin: 0 auto; 
+	font-family: Georgia, serif; 
+	font-size: 24px; 
+	padding-top: 20px; 
+	padding-bottom: 20px; 
+	padding-left: 50px; 
+	padding-right: 50px; 
+	background: #3F92D2; 
+	border: 3px solid; 
+}
+
+.middleimg {
+	margin: 10px; 
+	margin-bottom: 20px; 
+}
+
+.paragraph {
+	margin-top: 30px; 
+	margin-bottom: 30px; 
+}
+
+.firstimg {
+	margin-left: 88px; 
+	margin-top: 10px; 
+	margin-bottom: 20px; 
+}
+
+.lastimg {
+	margin-top: 10px; 
+	margin-bottom: 20px; 
+}
+
+a {
+	overflow: auto; 
+}
