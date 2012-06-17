@@ -144,7 +144,7 @@ foreach ($data as $row)
 	$i = $i + 1; 
 	$tbdata[$i] = array(); 
 	// $tbdata[$i]['uid'] = to_html($row->id); 
-	$tbdata[$i]['name'] = anchor('membership/profile/' . $row->id, to_html($row->name)); 
+	$tbdata[$i]['name'] = "<div style=\"min-width: 100px; \">" . anchor('membership/profile/' . $row->id, to_html($row->name)) . "</div>"; 
 	$tbdata[$i]['email'] = to_html($row->email); 
 	$tbdata[$i]['gender'] = $row->gender == "M" ? to_html($this->lang->line('membership_male')) : to_html($this->lang->line('membership_female')); 
 	$tbdata[$i]['year'] = to_html($row->year); 
@@ -157,6 +157,34 @@ foreach ($data as $row)
 }
 
 echo $this->table->generate($tbdata); 
+
+/*
+
+echo $tmpl['table_open']; 
+
+$iii = 0; 
+
+foreach ($tbdata as $row) {
+	$style = ""; 
+	if ($iii == 0) echo $tmpl["heading_row_start"]; 
+	else if ($iii % 2 == 1) echo $tmpl["row_start"]; 
+	else echo $tmpl["row_alt_start"]; 
+	foreach ($row as $key => $value) {
+		if ($iii == 0) echo $tmpl["heading_cell_start"]; 
+		else if ($iii % 2 == 1) echo $tmpl["cell_start"]; 
+		else echo $tmpl["cell_alt_start"]; 
+		echo $value; 
+		if ($iii == 0) echo $tmpl["heading_cell_end"]; 
+		else if ($iii % 2 == 1) echo $tmpl["cell_end"]; 
+		else echo $tmpl["cell_alt_end"]; 
+	}
+	if ($iii == 0) echo $tmpl["heading_row_end"]; 
+	else if ($iii % 2 == 1) echo $tmpl["row_end"]; 
+	else echo $tmpl["row_alt_end"]; 
+	$iii = $iii + 1; 
+}
+
+echo $tmpl['table_close']; */
 
 ?>
 
