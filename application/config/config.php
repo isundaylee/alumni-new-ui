@@ -513,7 +513,8 @@ $config['major_list'] = array(
 "RS"=>"宗教研究",
 "ST"=>"统计学",
 "UP"=>"城市规划",
-"WS"=>"妇女研究"
+"WS"=>"妇女研究",
+"OT"=>"其他"
 ); 
 
 $config['page_type_list'] = array(
