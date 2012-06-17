@@ -38,6 +38,7 @@ class Page_model extends CI_Model {
    	function get_records_count_fuzzy($delim = array())
    	{
    		foreach ($this->config->item('page_fields') as $field) if (isset($delim[$field]) && $delim[$field] != "") $this->db->like($field, $delim[$field]); 
+   		if (!isset($delim['type']) || $delim['type'] == '') $this->db->not_like('type', 'PP'); 
    		return $this->db->count_all_results('pages'); 
    	}
    	
