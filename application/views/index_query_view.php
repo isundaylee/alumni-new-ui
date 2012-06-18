@@ -1,5 +1,7 @@
 <?
 
+require_permission(1); 
+
 $essence = array("name", "email", "year", "class", "state", "city", "university"); 
 
 if (!isset($querydata)) $querydata = array(); 
