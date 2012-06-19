@@ -26,6 +26,9 @@ $lang['page_see_all_comments'] = "查看所有评论";
 $lang['page_pt_personal_page'] = "大家好，欢迎来到我的个人主页！"; 
 $lang['page_pc_personal_page'] = "大家好，这里是我的个人主页！\n我还没有添加任何内容，所以目前看起来有些许单调。\n过段时间再来看看吧！"; 
 
+$lang['page_es_new_comment'] = "您的页面有了新的评论！"; 
+$lang['page_ec_new_comment'] = "您好！您的页面 \"|TITLE|\" 有了新的评论！请点此查看：\n\n|URL|"; 
+
 $lang['page_msg_comment_empty'] = "您提供的评论内容为空。"; 
 $lang['page_msg_comment_added'] = "您成功地添加了一条评论。"; 
 $lang['page_msg_cannot_delete_personal_page'] = "您不能删除自己的个人主页。"; 

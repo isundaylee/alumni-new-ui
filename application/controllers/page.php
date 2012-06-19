@@ -250,8 +250,24 @@ class Page extends CI_Controller {
 		else
 		{
 			$this->load->model('comment_model'); 
+			$this->load->model('membership_model'); 
+			$this->load->model('page_model'); 
 			
 			$this->comment_model->insert_record($_POST); 
+			
+			$pages = $this->page_model->get_records(array("id" => $_POST['pid'])); 
+			$page = $pages[0]; 
+			
+			$users = $this->membership_model->get_records(array("id" => $page->owner)); 
+			$user = $users[0]; 
+
+			$this->load->library('email'); 
+			$this->email->from($this->config->item('webmaster_email')); 
+			$this->email->to($user->email); 
+			$this->email->subject($this->lang->line('page_es_new_comment')); 
+			$this->email->message(str_replace('|URL|', site_url('page/show/' . $page->id), str_replace('|TITLE|', $page->title, $this->lang->line('page_ec_new_comment'))));
+			
+			$this->email->send(); 
 			
 			$this->layout->message(array("content" => $this->lang->line('page_msg_comment_added'),
 										 "barelinks" => array($this->lang->line('misc_go_back') => "javascript:history.go(-1); "))); 
